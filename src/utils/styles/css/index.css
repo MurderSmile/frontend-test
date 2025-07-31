@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  font-family: "Lato", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: "Lato", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+* {
+  font-family: "Lato";
+  font-size: 20px;
+}
+
+nav {
+  background-color: #FD2D01;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  nav {
+    justify-content: center;
+  }
+}
+
+#logo {
+  height: 300px;
+  margin-left: 10px;
+}
+@media screen and (max-width: 600px) {
+  #logo {
+    margin-right: 10px;
+  }
+}
+
+#profil {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+}
+@media screen and (max-width: 600px) {
+  #profil {
+    padding-bottom: 50px;
+  }
+}
+#profil img {
+  align-self: center;
+  height: 100px;
+  width: 100px;
+}
+#profil button {
+  cursor: pointer;
+}
+
+footer {
+  background-color: #4E5166;
+  color: white;
+  padding: 50px;
+}
+
+#compteMenu {
+  background-color: #FFD7D7;
+  padding: 50px;
+}
+#compteMenu #send, #compteMenu button {
+  border: 2px solid #4E5166;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 50px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.activeBtn, #send:active {
+  background-color: #FD2D01;
+  color: black;
+}
+
+#email, #password {
+  margin: 2px;
+  border: 2px solid #4E5166;
+}
+
+#accueil {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  min-height: 700px;
+  justify-content: space-around;
+  background-color: #FFD7D7;
+}
+
+#createPost, #modifPost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #4E5166;
+  overflow-wrap: break-word;
+  border-radius: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 400px;
+  width: 500px;
+}
+@media screen and (max-width: 600px) {
+  #createPost, #modifPost {
+    border-radius: 50px 50px 0px 0px;
+    width: 90%;
+  }
+}
+#createPost label, #modifPost label {
+  font-weight: bold;
+  color: white;
+  margin: 5px;
+}
+#createPostPicture, #modifPostPicture {
+  background-color: #FD2D01;
+  border-radius: 50px;
+  height: 40px;
+}
+@media screen and (max-width: 600px) {
+  #createPostPicture, #modifPostPicture {
+    width: 90%;
+  }
+}
+#createPostContenu, #modifPostContenu {
+  background-color: #FD2D01;
+  resize: none;
+  height: 90%;
+  width: 90%;
+}
+@media screen and (max-width: 600px) {
+  #createPostContenu, #modifPostContenu {
+    width: 90%;
+  }
+}
+#createPostInteractions, #modifPostInteractions {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#createPostInteractionsSubmit, #createPostInteractionsNull, #modifPostInteractionsSubmit, #modifPostInteractionsNull {
+  border: none;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #FFD7D7;
+  color: black;
+  border-radius: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+#createPostInteractionsSubmitInvalid, #createPostInteractionsNullInvalid, #modifPostInteractionsSubmitInvalid, #modifPostInteractionsNullInvalid {
+  border: none;
+  justify-content: center;
+  font-weight: bold;
+  background-color: white;
+  color: #666666;
+  border-radius: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  #createPostInteractionsSubmit, #createPostInteractionsNull, #modifPostInteractionsSubmit, #modifPostInteractionsNull {
+    padding: 5px;
+  }
+}
+#createPostInteractionsSubmit:active, #createPostInteractionsNull:active, #modifPostInteractionsSubmit:active, #modifPostInteractionsNull:active {
+  background-color: black;
+  color: white;
+}
+
+#postList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow-y: scroll;
+  background-color: #FFD7D7;
+  box-shadow: 5px -5px 10px #FD2D01, -5px 5px 10px #FD2D01;
+  border-radius: 50px;
+  max-height: 600px;
+  width: 550px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 600px) {
+  #postList {
+    width: 90%;
+    box-shadow: none;
+    border: 5px solid #FD2D01;
+  }
+}
+#postList .post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-wrap: break-word;
+  background-color: #4E5166;
+  border-radius: 50px;
+  margin: 10px;
+  width: 500px;
+}
+@media screen and (max-width: 600px) {
+  #postList .post {
+    border-radius: 0px;
+    width: 95%;
+    margin: 5px;
+  }
+}
+#postList .postPicture {
+  object-fit: cover;
+  border-radius: 50px 50px 0 0;
+  max-height: 200px;
+  width: 90%;
+}
+#postList .postContent {
+  background-color: #FD2D01;
+  width: 90%;
+  padding-bottom: 50px;
+}
+#postList .postDate {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  #postList .postDate {
+    flex-direction: column;
+  }
+}
+#postList .postInteraction {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#postList .post button {
+  border: none;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #FFD7D7;
+  color: black;
+  border-radius: 50px;
+  margin: 5px;
+  cursor: pointer;
+}
+#postList .post button a {
+  text-decoration: none;
+  color: black;
+}
+#postList .post button:active {
+  background-color: black;
+  color: white;
+}
+#postList .post span {
+  font-weight: bold;
+  color: white;
+  justify-content: center;
+  margin: 5px;
+}
+
+/*# sourceMappingURL=index.css.map */

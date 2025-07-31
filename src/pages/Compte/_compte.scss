@@ -1,0 +1,22 @@
+#compteMenu {
+  background-color:$secondaire;
+  padding: 50px;
+  #send, button {
+    border: 2px solid $tertiaire;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 50px;
+    margin: 2px;
+    cursor: pointer;
+  }
+}
+
+.activeBtn, #send:active {
+  background-color: $primaire;
+  color: black;
+}
+
+#email, #password {
+  margin: 2px;
+  border: 2px solid $tertiaire;
+}

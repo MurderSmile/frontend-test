@@ -1,0 +1,35 @@
+nav {
+  background-color: $primaire;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (max-width: 600px){
+    justify-content: center;
+  }
+}
+
+#logo {
+  height: 300px;
+  margin-left: 10px;
+  @media screen and (max-width: 600px){
+    margin-right: 10px;
+  }
+}
+
+#profil {
+  display: flex;
+  flex-direction: column;
+  font-size: larger;
+  @media screen and (max-width: 600px){
+    padding-bottom: 50px;
+  }
+  img{
+    align-self: center;
+    height: 100px;
+    width: 100px;
+  }
+  button{
+    cursor: pointer;
+  }
+}
